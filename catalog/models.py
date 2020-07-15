@@ -1,5 +1,7 @@
 from django.db import models
 
+# Genre, Book, BookInstance, Author
+
 
 class Genre(models.Model):
     """Model representing a book genre."""
