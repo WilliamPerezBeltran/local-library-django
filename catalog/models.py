@@ -1,4 +1,5 @@
 from django.db import models
+import pdb
 
 # Genre, Book, BookInstance, Author
 
@@ -50,9 +51,14 @@ class Book(models.Model):
         """String for representing the Model object."""
         return self.title
 
-    def get_absolute_url(self):
+        # def get_absolute_url(self):
         """Returns the url to access a detail record for this book."""
-        return reverse("book-detail", args=[str(self.id)])
+        # return reverse("book-detail", args=[str(self.id)])
+
+    def get_absolute_url(self):
+        # pdb.set_trace()
+        # return reverse('book-detail', kwargs={ 'pk': str(self.id) })
+        return reverse("book_detail", args=[str(self.id)])
 
 
 import uuid  # Required for unique book instances
